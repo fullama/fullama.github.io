@@ -1,0 +1,138 @@
+# Featured Publications - Showcased prominently
+featured:
+  - id: gunc-2021
+    title: "GUNC: detection of chimerism and contamination in prokaryotic genomes"
+    authors: "Orakov A*, Fullam A*, Coelho LP, Khedkar S, Szklarczyk D, Mende DR, Schmidt TSB, Bork P"
+    journal: "Genome Biology"
+    year: 2021
+    volume: 22
+    issue: 1
+    pages: 178
+    doi: "10.1186/s13059-021-02393-0"
+    pmid: "34120611"
+    citations: "500+"
+    featured: true
+    first_author: true
+    tags: ["genomics", "quality-control", "metagenomics", "tools"]
+    links:
+      paper: "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02393-0"
+      github: "https://github.com/grp-bork/gunc"
+    abstract: "Conservatively estimated that 5.7% of genomes in GenBank, 5.2% in RefSeq, and 15-30% of 'high-quality' metagenome-assembled genomes are undetected chimeras."
+
+  - id: progenomes3-2023
+    title: "proGenomes3: approaching one million accurately and consistently annotated high-quality prokaryotic genomes"
+    authors: "Fullam A*, Letunic I*, Schmidt TSB, Ducarmon QR, Karcher N, Khedkar S, Maistrenko OM, Akanni W, Franke A, Orakov A, Bork P"
+    journal: "Nucleic Acids Research"
+    year: 2023
+    volume: 51
+    issue: D1
+    pages: "D760-D766"
+    doi: "10.1093/nar/gkac1078"
+    citations: "66"
+    featured: true
+    first_author: true
+    tags: ["genomics", "database", "prokaryotes", "annotation"]
+    links:
+      paper: "https://academic.oup.com/nar/article/51/D1/D760/6833227"
+      database: "https://progenomes.embl.de/"
+    abstract: "A comprehensive database approaching one million consistently annotated high-quality prokaryotic genomes."
+
+  - id: spire-2024
+    title: "SPIRE: a Searchable, Planetary-scale mIcrobiome REsource"
+    authors: "Schmidt TSB*, Fullam A*, Ferretti P, Orakov A, Maistrenko OM, Akanni W, Coelho LP, Babaian A, Chikina M, Mirdita M, Steinegger M, Bork P"
+    journal: "Nucleic Acids Research"
+    year: 2024
+    volume: 52
+    issue: D1
+    pages: "D777-D783"
+    doi: "10.1093/nar/gkad943"
+    citations: "72"
+    featured: true
+    first_author: true
+    tags: ["metagenomics", "database", "microbiome", "resource"]
+    links:
+      paper: "https://academic.oup.com/nar/article/52/D1/D777/7330121"
+    abstract: "Searchable planetary-scale microbiome resource integrating consistently processed metagenome-derived data across habitats and phylogeny."
+
+  - id: vire-2025
+    title: "VIRE: a metagenome-derived, planetary-scale virome resource with environmental context"
+    authors: "Nishijima S*, Fullam A*, Schmidt TSB*, Orakov A, Coelho LP, Letunic I, Vollmers J, Jahn MT, Krieger V, Hildebrand F, Bork P"
+    journal: "Nucleic Acids Research"
+    year: 2025
+    doi: "10.1093/nar/gkaf1225"
+    citations: "New"
+    featured: true
+    first_author: true
+    tags: ["virome", "metagenomics", "database", "viral-genomics"]
+    links:
+      paper: "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkaf1225/8356007"
+    abstract: "Comprehensive virome resource with over 1.7 million viral genomes from >100,000 publicly available metagenomes."
+
+  - id: progenomes4-2025
+    title: "proGenomes4: providing 2 million accurately and consistently annotated high-quality prokaryotic genomes"
+    authors: "Fullam A*, Letunic I*, Schmidt TSB, Akanni W, Orakov A, Bork P"
+    journal: "Nucleic Acids Research"
+    year: 2025
+    doi: "10.1093/nar/gkaf1208"
+    citations: "New"
+    featured: true
+    first_author: true
+    tags: ["genomics", "database", "prokaryotes", "annotation"]
+    links:
+      paper: "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkaf1208/8328542"
+      database: "https://progenomes.embl.de/"
+    abstract: "A resource of 2 million accurately and consistently annotated high-quality prokaryotic genomes."
+
+  - id: fmt-dynamics-2022
+    title: "Drivers and determinants of strain dynamics following fecal microbiota transplantation"
+    authors: "Schmidt TSB, Li SS, Maistrenko OM, Akanni W, Coelho LP, Fullam A, Karcher N, Mahé F, Ranjan B, Orakov A, Cunningham SR, Forster SC, Bork P, Huerta-Cepas J, Sunagawa S"
+    journal: "Nature Medicine"
+    year: 2022
+    volume: 28
+    pages: "1902-1912"
+    doi: "10.1038/s41591-022-01913-0"
+    citations: "202"
+    featured: false
+    tags: ["microbiome", "fmt", "metagenomics", "clinical"]
+    links:
+      paper: "https://www.nature.com/articles/s41591-022-01913-0"
+    abstract: "Analysis of metagenomes from 316 FMTs for treatment of ten disease indications."
+
+  - id: pancreatic-cancer-2022
+    title: "A faecal microbiota signature with high specificity for pancreatic cancer"
+    authors: "Kartal E*, Schmidt TSB*, Molina-Montes E, ..., Fullam A, ..., Bork P"
+    journal: "Gut"
+    year: 2022
+    volume: 71
+    issue: 7
+    pages: "1359-1372"
+    doi: "10.1136/gutjnl-2021-324755"
+    citations: "257"
+    featured: false
+    tags: ["microbiome", "cancer", "biomarker", "clinical"]
+    links:
+      paper: "https://gut.bmj.com/content/71/7/1359"
+    abstract: "Identified a faecal microbiota signature with high specificity for pancreatic cancer across multiple countries."
+
+  - id: amp-discovery-2024
+    title: "Discovery of antimicrobial peptides in the global microbiome with machine learning"
+    authors: "Santos-Júnior CD*, Torres MDT*, Duan Y, Del Río ÁR, Schmidt TSB, Fullam A, Zhao L, Coelho LP, Bork P"
+    journal: "Cell"
+    year: 2024
+    volume: 187
+    issue: 14
+    pages: "3761-3778"
+    doi: "10.1016/j.cell.2024.05.013"
+    citations: "259"
+    featured: false
+    tags: ["machine-learning", "antimicrobials", "metagenomics", "functional-genomics"]
+    links:
+      paper: "https://www.cell.com/cell/fulltext/S0092-8674(24)00478-7"
+    abstract: "Discovered novel antimicrobial peptides in the global microbiome using machine learning approaches."
+
+# Additional high-impact publications (add more as needed)
+# These will be shown in the "View All" section
+all:
+  # Include all featured papers plus additional ones
+  # Can be populated from ORCID or manually
+  # For now, featured papers will be the main showcase

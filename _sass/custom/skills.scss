@@ -1,0 +1,218 @@
+// Skills Matrix Section Styles
+
+.skills-section {
+  padding: $space-24 $space-6;
+  background: $dark-bg;
+
+  @media (max-width: $medium) {
+    padding: $space-16 $space-4;
+  }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $space-8;
+
+  @media (max-width: $small) {
+    grid-template-columns: 1fr;
+    gap: $space-6;
+  }
+}
+
+.skill-category {
+  background: $card-bg;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-xl;
+  padding: $space-8;
+  transition: all $transition-base;
+  opacity: 0;
+  transform: translateY(20px);
+
+  &.animate-in {
+    animation: fadeInUp 0.5s ease forwards;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+    border-color: rgba($primary-bio-blue, 0.5);
+  }
+}
+
+.skill-category-header {
+  display: flex;
+  align-items: center;
+  gap: $space-4;
+  margin-bottom: $space-6;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $gradient-primary;
+  border-radius: $radius-lg;
+  color: $primary-bio-blue;
+  font-size: $text-xl;
+}
+
+.skill-category-title {
+  font-family: $font-heading;
+  font-size: $text-xl;
+  font-weight: $font-bold;
+  color: $text-primary;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.skill-category-description {
+  font-size: $text-sm;
+  color: $text-muted;
+  margin-bottom: $space-6;
+  line-height: $leading-relaxed;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-item {
+  margin-bottom: $space-4;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $space-2;
+}
+
+.skill-name {
+  font-family: $font-heading;
+  font-size: $text-base;
+  font-weight: $font-semibold;
+  color: $text-primary;
+}
+
+.skill-level {
+  font-size: $text-xs;
+  color: $text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skill-details {
+  font-size: $text-sm;
+  color: $text-secondary;
+  line-height: $leading-relaxed;
+  margin-bottom: $space-2;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: $space-1 $space-2;
+  background: rgba($primary-bio-blue, 0.1);
+  border: 1px solid rgba($primary-bio-blue, 0.2);
+  border-radius: $radius-sm;
+  font-size: $text-xs;
+  color: $primary-bio-blue;
+}
+
+// Visual indicator for expertise level
+.skill-indicator {
+  width: 100%;
+  height: 3px;
+  background: $border-subtle;
+  border-radius: $radius-full;
+  margin-top: $space-2;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, $primary-bio-blue, $secondary-green);
+    border-radius: $radius-full;
+    transition: width $transition-slow;
+  }
+}
+
+.skill-item[data-level="expert"] .skill-indicator::after {
+  width: 100%;
+}
+
+.skill-item[data-level="advanced"] .skill-indicator::after {
+  width: 75%;
+}
+
+.skill-item[data-level="intermediate"] .skill-indicator::after {
+  width: 50%;
+}
+
+.skill-item[data-level="beginner"] .skill-indicator::after {
+  width: 25%;
+}
+
+// Tools showcase
+.tools-showcase {
+  margin-top: $space-12;
+}
+
+.tools-title {
+  font-family: $font-heading;
+  font-size: $text-2xl;
+  font-weight: $font-bold;
+  color: $text-primary;
+  text-align: center;
+  margin-bottom: $space-8;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: $space-4;
+}
+
+.tool-card {
+  background: $card-bg;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-md;
+  padding: $space-4;
+  text-align: center;
+  transition: all $transition-base;
+
+  &:hover {
+    border-color: $primary-bio-blue;
+    transform: translateY(-2px);
+  }
+}
+
+.tool-name {
+  font-family: $font-heading;
+  font-size: $text-base;
+  font-weight: $font-semibold;
+  color: $text-primary;
+  margin-bottom: $space-1;
+}
+
+.tool-category {
+  font-size: $text-xs;
+  color: $text-muted;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

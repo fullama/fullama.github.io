@@ -1,0 +1,346 @@
+// Utility Classes and Animations
+
+// ============================================================================
+// Global Overrides for Portfolio Page
+// ============================================================================
+
+.portfolio-page {
+  background: $dark-bg;
+  color: $text-primary;
+  scroll-behavior: smooth;
+
+  // Override minimal mistakes defaults
+  .masthead {
+    background: transparent;
+    border-bottom: 1px solid $border-subtle;
+  }
+
+  .page__footer {
+    background: $darker-bg;
+    border-top: 1px solid $border-subtle;
+  }
+}
+
+// ============================================================================
+// Navigation Styles
+// ============================================================================
+
+.portfolio-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-sticky;
+  background: rgba($darker-bg, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid $border-subtle;
+  transition: transform $transition-base, background $transition-base;
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+}
+
+.nav-container {
+  max-width: $container-wide;
+  margin: 0 auto;
+  padding: $space-4 $space-6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $medium) {
+    padding: $space-3 $space-4;
+  }
+}
+
+.nav-logo {
+  font-family: $font-heading;
+  font-size: $text-xl;
+  font-weight: $font-bold;
+  color: $text-primary;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $primary-bio-blue;
+  }
+}
+
+.nav-links {
+  display: flex;
+  gap: $space-6;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $medium) {
+    gap: $space-4;
+  }
+
+  @media (max-width: $small) {
+    display: none; // Mobile menu needed
+  }
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    font-family: $font-heading;
+    font-size: $text-base;
+    font-weight: $font-medium;
+    color: $text-secondary;
+    text-decoration: none;
+    transition: color $transition-base;
+    position: relative;
+
+    @media (max-width: $medium) {
+      font-size: $text-sm;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -$space-1;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: $primary-bio-blue;
+      transition: width $transition-base;
+    }
+
+    &:hover,
+    &.active {
+      color: $primary-bio-blue;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// ============================================================================
+// Animations
+// ============================================================================
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Stagger animation delays for grids
+.publications-grid .publication-card {
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.1}s;
+    }
+  }
+}
+
+.skills-grid .skill-category {
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.15}s;
+    }
+  }
+}
+
+.timeline-item {
+  @for $i from 1 through 8 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{$i * 0.2}s;
+    }
+  }
+}
+
+// ============================================================================
+// Glass Morphism Utilities
+// ============================================================================
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+// ============================================================================
+// Spacing Utilities
+// ============================================================================
+
+.mt-0 { margin-top: 0; }
+.mt-4 { margin-top: $space-4; }
+.mt-8 { margin-top: $space-8; }
+.mt-12 { margin-top: $space-12; }
+.mt-16 { margin-top: $space-16; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-4 { margin-bottom: $space-4; }
+.mb-8 { margin-bottom: $space-8; }
+.mb-12 { margin-bottom: $space-12; }
+.mb-16 { margin-bottom: $space-16; }
+
+.pt-0 { padding-top: 0; }
+.pt-4 { padding-top: $space-4; }
+.pt-8 { padding-top: $space-8; }
+.pt-12 { padding-top: $space-12; }
+.pt-16 { padding-top: $space-16; }
+
+.pb-0 { padding-bottom: 0; }
+.pb-4 { padding-bottom: $space-4; }
+.pb-8 { padding-bottom: $space-8; }
+.pb-12 { padding-bottom: $space-12; }
+.pb-16 { padding-bottom: $space-16; }
+
+// ============================================================================
+// Text Utilities
+// ============================================================================
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-primary { color: $text-primary; }
+.text-secondary { color: $text-secondary; }
+.text-muted { color: $text-muted; }
+
+.font-bold { font-weight: $font-bold; }
+.font-semibold { font-weight: $font-semibold; }
+.font-medium { font-weight: $font-medium; }
+
+// ============================================================================
+// Display Utilities
+// ============================================================================
+
+.hidden { display: none; }
+.block { display: block; }
+.inline-block { display: inline-block; }
+.flex { display: flex; }
+
+// ============================================================================
+// Responsive Utilities
+// ============================================================================
+
+@media (max-width: $small) {
+  .hidden-mobile { display: none; }
+}
+
+@media (min-width: $small + 1) {
+  .visible-mobile { display: none; }
+}
+
+// ============================================================================
+// Loading States
+// ============================================================================
+
+.loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.6;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid $primary-bio-blue;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+// ============================================================================
+// Scroll Padding (for smooth scroll with fixed nav)
+// ============================================================================
+
+html {
+  scroll-padding-top: 80px;
+}
+
+// ============================================================================
+// Selection Styling
+// ============================================================================
+
+::selection {
+  background: rgba($primary-bio-blue, 0.3);
+  color: $text-primary;
+}
+
+::-moz-selection {
+  background: rgba($primary-bio-blue, 0.3);
+  color: $text-primary;
+}
+
+// ============================================================================
+// Scrollbar Styling (Webkit browsers)
+// ============================================================================
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $darker-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $border-subtle;
+  border-radius: $radius-full;
+
+  &:hover {
+    background: $border-light;
+  }
+}

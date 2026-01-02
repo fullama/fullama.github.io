@@ -1,0 +1,324 @@
+// Professional Timeline Section Styles
+
+.timeline-section {
+  padding: $space-24 $space-6;
+  background: $darker-bg;
+
+  @media (max-width: $medium) {
+    padding: $space-16 $space-4;
+  }
+}
+
+.timeline-container {
+  max-width: $container-medium;
+  margin: 0 auto;
+  position: relative;
+
+  // Vertical timeline line
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: $border-subtle;
+    transform: translateX(-50%);
+
+    @media (max-width: $medium) {
+      left: $space-6;
+    }
+  }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: $space-16;
+  opacity: 0;
+  transform: translateY(30px);
+
+  &.animate-in {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  // Alternating sides on desktop
+  &:nth-child(odd) {
+    padding-left: calc(50% + $space-8);
+
+    @media (max-width: $medium) {
+      padding-left: $space-16;
+    }
+
+    .timeline-card {
+      @media (min-width: $medium + 1) {
+        &::before {
+          content: '';
+          position: absolute;
+          right: 100%;
+          top: $space-6;
+          width: $space-8;
+          height: 2px;
+          background: $border-subtle;
+        }
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    padding-right: calc(50% + $space-8);
+    text-align: right;
+
+    @media (max-width: $medium) {
+      padding-right: 0;
+      padding-left: $space-16;
+      text-align: left;
+    }
+
+    .timeline-card {
+      @media (min-width: $medium + 1) {
+        &::before {
+          content: '';
+          position: absolute;
+          left: 100%;
+          top: $space-6;
+          width: $space-8;
+          height: 2px;
+          background: $border-subtle;
+        }
+      }
+    }
+
+    .timeline-content {
+      @media (min-width: $medium + 1) {
+        text-align: right;
+      }
+    }
+  }
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: $primary-bio-blue;
+  border: 4px solid $darker-bg;
+  border-radius: 50%;
+  z-index: 2;
+
+  @media (max-width: $medium) {
+    left: $space-6;
+  }
+
+  // Pulse animation
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: rgba($primary-bio-blue, 0.3);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.timeline-card {
+  background: $card-bg;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-xl;
+  padding: $space-6;
+  transition: all $transition-base;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+    border-color: $primary-bio-blue;
+  }
+}
+
+.timeline-date {
+  display: inline-block;
+  font-family: $font-mono;
+  font-size: $text-sm;
+  color: $primary-bio-blue;
+  font-weight: $font-bold;
+  margin-bottom: $space-3;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.timeline-header {
+  margin-bottom: $space-4;
+}
+
+.timeline-title {
+  font-family: $font-heading;
+  font-size: $text-xl;
+  font-weight: $font-bold;
+  color: $text-primary;
+  margin-bottom: $space-2;
+  line-height: $leading-tight;
+}
+
+.timeline-organization {
+  font-size: $text-base;
+  color: $text-secondary;
+  font-weight: $font-medium;
+  margin-bottom: $space-1;
+}
+
+.timeline-group {
+  font-size: $text-sm;
+  color: $text-muted;
+  margin-bottom: $space-1;
+}
+
+.timeline-location {
+  font-size: $text-sm;
+  color: $text-muted;
+}
+
+.timeline-type {
+  display: inline-block;
+  padding: $space-1 $space-2;
+  background: rgba($secondary-green, 0.1);
+  border: 1px solid rgba($secondary-green, 0.3);
+  border-radius: $radius-sm;
+  font-size: $text-xs;
+  color: $secondary-green;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: $space-2;
+
+  &[data-type="academic"] {
+    background: rgba($accent-purple, 0.1);
+    border-color: rgba($accent-purple, 0.3);
+    color: $accent-purple;
+  }
+}
+
+.timeline-content {
+  margin-bottom: $space-4;
+
+  p {
+    font-size: $text-base;
+    color: $text-secondary;
+    line-height: $leading-relaxed;
+    margin-bottom: $space-4;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.timeline-highlights {
+  margin: $space-4 0;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    font-size: $text-sm;
+    color: $text-secondary;
+    line-height: $leading-relaxed;
+    padding-left: $space-6;
+    position: relative;
+    margin-bottom: $space-2;
+
+    &::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: $secondary-green;
+      font-weight: $font-bold;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.timeline-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  margin-bottom: $space-4;
+
+  @media (max-width: $medium) {
+    justify-content: flex-start;
+  }
+
+  .timeline-item:nth-child(even) & {
+    @media (min-width: $medium + 1) {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: $space-1 $space-2;
+  background: rgba($primary-bio-blue, 0.1);
+  border: 1px solid rgba($primary-bio-blue, 0.2);
+  border-radius: $radius-sm;
+  font-size: $text-xs;
+  color: $primary-bio-blue;
+  font-family: $font-mono;
+}
+
+.timeline-links {
+  display: flex;
+  gap: $space-3;
+  flex-wrap: wrap;
+
+  @media (max-width: $medium) {
+    justify-content: flex-start;
+  }
+
+  .timeline-item:nth-child(even) & {
+    @media (min-width: $medium + 1) {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.timeline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-1;
+  color: $primary-bio-blue;
+  text-decoration: none;
+  font-size: $text-sm;
+  transition: all $transition-base;
+
+  &:hover {
+    color: lighten($primary-bio-blue, 10%);
+    transform: translateX(2px);
+  }
+}

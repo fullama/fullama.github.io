@@ -1,0 +1,261 @@
+// Publications Showcase Section Styles
+
+.publications-section {
+  padding: $space-24 $space-6;
+  background: $darker-bg;
+
+  @media (max-width: $medium) {
+    padding: $space-16 $space-4;
+  }
+}
+
+.publications-stats {
+  text-align: center;
+  font-size: $text-xl;
+  color: $text-secondary;
+  margin-bottom: $space-12;
+
+  @media (max-width: $small) {
+    font-size: $text-base;
+  }
+}
+
+.stat {
+  font-weight: $font-semibold;
+  color: $text-primary;
+}
+
+.stat-separator {
+  color: $text-muted;
+  margin: 0 $space-3;
+}
+
+.publications-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+  justify-content: center;
+  margin-bottom: $space-12;
+  align-items: center;
+}
+
+.filter-btn {
+  padding: $space-2 $space-4;
+  background: transparent;
+  border: 1px solid $border-light;
+  border-radius: $radius-full;
+  color: $text-secondary;
+  font-size: $text-sm;
+  font-weight: $font-medium;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:hover {
+    background: rgba($primary-bio-blue, 0.1);
+    border-color: $primary-bio-blue;
+    color: $primary-bio-blue;
+  }
+
+  &.active {
+    background: $primary-bio-blue;
+    border-color: $primary-bio-blue;
+    color: white;
+  }
+}
+
+.publication-search {
+  padding: $space-2 $space-4;
+  background: $card-bg;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-lg;
+  color: $text-primary;
+  font-size: $text-sm;
+  min-width: 200px;
+  transition: all $transition-base;
+
+  &::placeholder {
+    color: $text-muted;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $primary-bio-blue;
+    box-shadow: 0 0 0 3px rgba($primary-bio-blue, 0.1);
+  }
+}
+
+.publications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: $space-6;
+  margin-bottom: $space-12;
+
+  @media (max-width: $small) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.publication-card {
+  background: $card-bg;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-lg;
+  padding: $space-6;
+  transition: all $transition-base;
+  opacity: 0;
+  transform: translateY(20px);
+  display: flex;
+  flex-direction: column;
+
+  &.animate-in {
+    animation: fadeInUp 0.5s ease forwards;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+    border-color: $primary-bio-blue;
+  }
+}
+
+.publication-header {
+  display: flex;
+  gap: $space-2;
+  margin-bottom: $space-3;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: $space-1 $space-2;
+  border-radius: $radius-sm;
+  font-size: $text-xs;
+  font-weight: $font-semibold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-featured {
+  background: rgba($accent-purple, 0.2);
+  color: $accent-purple;
+  border: 1px solid rgba($accent-purple, 0.4);
+}
+
+.badge-first-author {
+  background: rgba($secondary-green, 0.2);
+  color: $secondary-green;
+  border: 1px solid rgba($secondary-green, 0.4);
+}
+
+.publication-title {
+  font-family: $font-heading;
+  font-size: $text-lg;
+  font-weight: $font-semibold;
+  color: $text-primary;
+  line-height: $leading-snug;
+  margin-bottom: $space-3;
+  flex-grow: 1;
+
+  @media (max-width: $small) {
+    font-size: $text-base;
+  }
+}
+
+.publication-meta {
+  font-size: $text-sm;
+  color: $text-muted;
+  margin-bottom: $space-4;
+}
+
+.journal {
+  color: $text-secondary;
+  font-style: italic;
+}
+
+.year {
+  color: $text-muted;
+}
+
+.publication-metrics {
+  display: flex;
+  gap: $space-4;
+  margin-bottom: $space-4;
+}
+
+.citations {
+  display: flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: $text-sm;
+  color: $accent-orange;
+  font-weight: $font-medium;
+
+  i {
+    font-size: $text-xs;
+  }
+}
+
+.publication-links {
+  display: flex;
+  gap: $space-3;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-1;
+  padding: $space-1 $space-3;
+  background: transparent;
+  border: 1px solid $border-light;
+  border-radius: $radius-md;
+  color: $text-secondary;
+  text-decoration: none;
+  font-size: $text-xs;
+  transition: all $transition-base;
+
+  i {
+    font-size: $text-sm;
+  }
+
+  &:hover {
+    background: rgba($primary-bio-blue, 0.1);
+    border-color: $primary-bio-blue;
+    color: $primary-bio-blue;
+  }
+}
+
+.publications-footer {
+  text-align: center;
+  margin-top: $space-8;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-3 $space-6;
+  background: transparent;
+  border: 2px solid $border-light;
+  border-radius: $radius-lg;
+  color: $text-primary;
+  text-decoration: none;
+  font-size: $text-base;
+  font-weight: $font-medium;
+  transition: all $transition-base;
+
+  i {
+    transition: transform $transition-base;
+  }
+
+  &:hover {
+    background: rgba($primary-bio-blue, 0.1);
+    border-color: $primary-bio-blue;
+    color: $primary-bio-blue;
+    transform: translateY(-2px);
+
+    i {
+      transform: translateX(4px);
+    }
+  }
+}

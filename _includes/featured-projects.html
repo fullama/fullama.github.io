@@ -1,0 +1,76 @@
+<section id="work" class="featured-projects">
+  <div class="container">
+    <h2 class="section-title">Featured Work</h2>
+    <p class="section-subtitle">
+      Tools and research making an impact in bioinformatics
+    </p>
+
+    <div class="projects-grid">
+      {% assign sorted_projects = site.data.projects | where: "featured", true | sort: "featured_order" %}
+      {% for project in sorted_projects %}
+      <article class="project-card">
+        <div class="project-image">
+          {% if project.image %}
+          <img src="{{ project.image | relative_url }}"
+               alt="{{ project.name }} visualization"
+               loading="lazy">
+          {% else %}
+          <div style="display: flex; align-items: center; justify-content: center; height: 100%; font-size: 4rem; color: rgba(255,255,255,0.1);">
+            {{ project.name }}
+          </div>
+          {% endif %}
+          <div class="project-overlay"></div>
+        </div>
+
+        <div class="project-content">
+          <h3 class="project-title">
+            {{ project.name }}: {{ project.tagline }}
+          </h3>
+
+          <p class="project-description">
+            {{ project.description }}
+          </p>
+
+          <div class="project-impact">
+            <h4>Impact</h4>
+            <ul>
+              {% for impact in project.impact %}
+              <li>{{ impact }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="project-tech">
+            {% for tech in project.tech_stack %}
+            <span class="tech-badge">{{ tech }}</span>
+            {% endfor %}
+          </div>
+
+          <div class="project-links">
+            {% if project.links.github %}
+            <a href="{{ project.links.github }}" class="btn-link" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            {% endif %}
+            {% if project.links.paper %}
+            <a href="{{ project.links.paper }}" class="btn-link" target="_blank" rel="noopener">
+              <i class="fas fa-file-alt"></i> Paper
+            </a>
+            {% endif %}
+            {% if project.links.docs %}
+            <a href="{{ project.links.docs }}" class="btn-link" target="_blank" rel="noopener">
+              <i class="fas fa-book"></i> Docs
+            </a>
+            {% endif %}
+            {% if project.links.database %}
+            <a href="{{ project.links.database }}" class="btn-link" target="_blank" rel="noopener">
+              <i class="fas fa-database"></i> Database
+            </a>
+            {% endif %}
+          </div>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

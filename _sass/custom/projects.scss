@@ -1,0 +1,231 @@
+// Featured Projects Section Styles
+
+.featured-projects {
+  padding: $space-24 $space-6;
+  background: $dark-bg;
+
+  @media (max-width: $medium) {
+    padding: $space-16 $space-4;
+  }
+}
+
+.section-title {
+  font-family: $font-heading;
+  font-size: $text-4xl;
+  font-weight: $font-bold;
+  color: $text-primary;
+  text-align: center;
+  margin-bottom: $space-4;
+
+  @media (max-width: $medium) {
+    font-size: $text-3xl;
+  }
+
+  @media (max-width: $small) {
+    font-size: $text-2xl;
+  }
+}
+
+.section-subtitle {
+  font-size: $text-lg;
+  color: $text-secondary;
+  text-align: center;
+  max-width: $container-narrow;
+  margin: 0 auto $space-16;
+  line-height: $leading-relaxed;
+
+  @media (max-width: $small) {
+    font-size: $text-base;
+  }
+}
+
+.container {
+  max-width: $container-wide;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-12;
+
+  @media (min-width: $large) {
+    gap: $space-16;
+  }
+}
+
+.project-card {
+  background: $card-bg;
+  border: 1px solid $border-subtle;
+  border-radius: $radius-xl;
+  overflow: hidden;
+  transition: all $transition-base;
+  opacity: 0;
+  transform: translateY(30px);
+
+  &.animate-in {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: $shadow-xl, 0 0 30px rgba($primary-bio-blue, 0.15);
+    border-color: $primary-bio-blue;
+  }
+
+  @media (min-width: $medium) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+}
+
+.project-image {
+  position: relative;
+  overflow: hidden;
+  background: $darker-bg;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform $transition-slow;
+  }
+
+  .project-card:hover & img {
+    transform: scale(1.05);
+  }
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $gradient-primary;
+  opacity: 0.3;
+}
+
+.project-content {
+  padding: $space-8;
+
+  @media (max-width: $medium) {
+    padding: $space-6;
+  }
+}
+
+.project-title {
+  font-family: $font-heading;
+  font-size: $text-2xl;
+  font-weight: $font-bold;
+  color: $text-primary;
+  margin-bottom: $space-4;
+  line-height: $leading-tight;
+
+  @media (max-width: $small) {
+    font-size: $text-xl;
+  }
+}
+
+.project-description {
+  font-size: $text-base;
+  color: $text-secondary;
+  line-height: $leading-relaxed;
+  margin-bottom: $space-6;
+
+  @media (max-width: $small) {
+    font-size: $text-sm;
+  }
+}
+
+.project-impact {
+  margin-bottom: $space-6;
+
+  h4 {
+    font-family: $font-heading;
+    font-size: $text-sm;
+    font-weight: $font-semibold;
+    color: $primary-bio-blue;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: $space-3;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    font-size: $text-sm;
+    color: $text-secondary;
+    line-height: $leading-relaxed;
+    padding-left: $space-6;
+    position: relative;
+    margin-bottom: $space-2;
+
+    &::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: $secondary-green;
+      font-weight: $font-bold;
+    }
+  }
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-2;
+  margin-bottom: $space-6;
+}
+
+.tech-badge {
+  display: inline-block;
+  padding: $space-1 $space-3;
+  background: rgba($primary-bio-blue, 0.1);
+  border: 1px solid rgba($primary-bio-blue, 0.3);
+  border-radius: $radius-full;
+  font-size: $text-xs;
+  color: $primary-bio-blue;
+  font-weight: $font-medium;
+}
+
+.project-links {
+  display: flex;
+  gap: $space-4;
+  flex-wrap: wrap;
+}
+
+.btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  padding: $space-2 $space-4;
+  background: transparent;
+  border: 1px solid $border-light;
+  border-radius: $radius-md;
+  color: $text-primary;
+  text-decoration: none;
+  font-size: $text-sm;
+  font-weight: $font-medium;
+  transition: all $transition-base;
+
+  i {
+    font-size: $text-base;
+  }
+
+  &:hover {
+    background: rgba($primary-bio-blue, 0.1);
+    border-color: $primary-bio-blue;
+    color: $primary-bio-blue;
+    transform: translateY(-2px);
+  }
+}

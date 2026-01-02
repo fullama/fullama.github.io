@@ -1,0 +1,146 @@
+categories:
+  - name: "Bioinformatics & Genomics"
+    icon: "dna"
+    description: "Expertise in computational analysis of biological data"
+    skills:
+      - name: "Prokaryotic Genomics"
+        level: "expert"
+        years: 8
+        description: "Genome assembly, annotation, quality control"
+
+      - name: "Metagenomics"
+        level: "expert"
+        years: 7
+        description: "MAG recovery, taxonomic profiling, functional analysis"
+
+      - name: "Genome Quality Control"
+        level: "expert"
+        years: 6
+        projects: ["GUNC", "proGenomes"]
+        description: "Contamination detection, chimera identification"
+
+      - name: "Phylogenomics"
+        level: "advanced"
+        years: 5
+        description: "Phylogenetic analysis, taxonomic classification"
+
+      - name: "Comparative Genomics"
+        level: "expert"
+        years: 7
+        description: "Cross-genome analysis, functional prediction"
+
+      - name: "Sequence Analysis"
+        level: "expert"
+        years: 10
+        description: "Alignment, annotation, homology detection"
+
+  - name: "Software Development"
+    icon: "code"
+    description: "Building robust, scalable bioinformatics tools"
+    skills:
+      - name: "Python"
+        level: "expert"
+        years: 10
+        frameworks: ["Biopython", "NumPy", "Pandas", "Click"]
+        description: "Primary language for bioinformatics pipelines and tools"
+
+      - name: "Nextflow"
+        level: "advanced"
+        years: 4
+        description: "Workflow management and pipeline development"
+
+      - name: "Bash/Shell Scripting"
+        level: "expert"
+        years: 10
+        description: "Automation, data processing, system administration"
+
+      - name: "R"
+        level: "intermediate"
+        years: 6
+        description: "Statistical analysis and visualization"
+
+      - name: "Git/Version Control"
+        level: "expert"
+        years: 10
+        description: "Collaborative development, code review"
+
+      - name: "Software Design"
+        level: "advanced"
+        description: "API design, modular architecture, testing"
+
+  - name: "Data Science & Analysis"
+    icon: "chart"
+    description: "Large-scale data processing and analysis"
+    skills:
+      - name: "Statistical Analysis"
+        level: "advanced"
+        description: "Hypothesis testing, modeling, interpretation"
+
+      - name: "Data Visualization"
+        level: "advanced"
+        tools: ["matplotlib", "ggplot2", "plotly"]
+        description: "Creating clear, informative scientific visualizations"
+
+      - name: "Database Management"
+        level: "advanced"
+        description: "SQL, database design, query optimization"
+
+      - name: "Large-scale Data Processing"
+        level: "expert"
+        description: "Processing millions of genomes and metagenomes"
+
+  - name: "Infrastructure & DevOps"
+    icon: "server"
+    description: "Deploying and maintaining bioinformatics infrastructure"
+    skills:
+      - name: "High-Performance Computing"
+        level: "expert"
+        years: 8
+        description: "SLURM, PBS, parallel processing"
+
+      - name: "Containerization"
+        level: "advanced"
+        tools: ["Docker", "Singularity"]
+        description: "Reproducible software environments"
+
+      - name: "CI/CD"
+        level: "advanced"
+        tools: ["GitHub Actions", "GitLab CI"]
+        description: "Automated testing and deployment"
+
+      - name: "Linux Systems"
+        level: "expert"
+        years: 10
+        description: "Server administration, optimization"
+
+      - name: "Cloud Computing"
+        level: "intermediate"
+        platforms: ["AWS", "GCP"]
+        description: "Cloud-based bioinformatics workflows"
+
+tools:
+  bioinformatics:
+    - name: "Prokka"
+      category: "Genome Annotation"
+    - name: "CheckM"
+      category: "Quality Control"
+    - name: "GTDB-Tk"
+      category: "Taxonomy"
+    - name: "MetaBAT"
+      category: "Binning"
+    - name: "DIAMOND"
+      category: "Sequence Search"
+    - name: "BLAST"
+      category: "Sequence Search"
+    - name: "MAFFT"
+      category: "Alignment"
+    - name: "IQ-TREE"
+      category: "Phylogenetics"
+
+  developed:
+    - name: "GUNC"
+      description: "Genome quality control"
+      link: "https://github.com/grp-bork/gunc"
+    - name: "proGenomes"
+      description: "Genome database"
+      link: "https://progenomes.embl.de/"

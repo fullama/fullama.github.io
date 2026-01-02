@@ -1,0 +1,80 @@
+<section id="experience" class="timeline-section">
+  <div class="container">
+    <h2 class="section-title">Professional Experience</h2>
+    <p class="section-subtitle">
+      Building impactful bioinformatics tools and contributing to scientific research
+    </p>
+
+    <div class="timeline-container">
+      {% for position in site.data.timeline.positions %}
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+
+        <div class="timeline-card">
+          <div class="timeline-date">
+            {% if position.start_date %}
+              {{ position.start_date | date: "%b %Y" }}
+            {% endif %}
+            {% if position.end_date %}
+              {% if position.end_date == "present" %}
+                – Present
+              {% else %}
+                – {{ position.end_date | date: "%b %Y" }}
+              {% endif %}
+            {% endif %}
+          </div>
+
+          <div class="timeline-header">
+            <h3 class="timeline-title">{{ position.title }}</h3>
+            <div class="timeline-organization">{{ position.organization }}</div>
+            {% if position.group %}
+            <div class="timeline-group">{{ position.group }}</div>
+            {% endif %}
+            <div class="timeline-location">{{ position.location }}</div>
+            {% if position.type %}
+            <span class="timeline-type" data-type="{{ position.type }}">
+              {{ position.type }}
+            </span>
+            {% endif %}
+          </div>
+
+          <div class="timeline-content">
+            <p>{{ position.description }}</p>
+          </div>
+
+          {% if position.highlights %}
+          <div class="timeline-highlights">
+            <ul>
+              {% for highlight in position.highlights %}
+              <li>{{ highlight }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endif %}
+
+          {% if position.tech %}
+          <div class="timeline-tech">
+            {% for tech in position.tech %}
+            <span class="tech-tag">{{ tech }}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          {% if position.links %}
+          <div class="timeline-links">
+            {% for link in position.links %}
+            <a href="{{ link.url }}"
+               class="timeline-link"
+               target="_blank"
+               rel="noopener">
+              {{ link.text }} →
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

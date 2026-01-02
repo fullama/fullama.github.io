@@ -1,0 +1,103 @@
+- id: gunc
+  name: "GUNC"
+  full_name: "Genome UNClutterer"
+  tagline: "Detecting the invisible contamination in prokaryotic genomes"
+  description: |
+    Discovered that 15-30% of "high-quality" metagenome-assembled genomes were
+    actually chimeras - contamination that existing quality control tools completely
+    missed. GUNC detects chimerism by analyzing the lineage homogeneity of individual
+    contigs, revealing hidden genome assembly artifacts.
+  impact:
+    - "Revealed 15-30% of 'high-quality' MAGs were undetected chimeras"
+    - "500+ citations since 2021 publication in Genome Biology"
+    - "Adopted by GTDB, NCBI, and major genome sequencing centers"
+    - "Improved quality standards for prokaryotic genome databases worldwide"
+  tech_stack:
+    - Python
+    - Bioinformatics algorithms
+    - Taxonomic classification
+    - HPC/parallel processing
+  links:
+    github: "https://github.com/grp-bork/gunc"
+    paper: "https://genomebiology.biomedcentral.com/articles/10.1186/s13059-021-02393-0"
+    docs: "https://grp-bork.embl-community.io/gunc/"
+  image: "/assets/images/projects/gunc.png"
+  featured: true
+  featured_order: 1
+
+- id: progenomes
+  name: "proGenomes"
+  full_name: "proGenomes Database"
+  tagline: "2 million consistently annotated prokaryotic genomes"
+  description: |
+    Led development of proGenomes3 and proGenomes4, the world's largest consistently
+    processed and annotated database of high-quality prokaryotic genomes. Provides
+    researchers with a reliable foundation for comparative genomics, phylogenetics,
+    and functional studies across bacterial and archaeal diversity.
+  impact:
+    - "Scaled from 87K genomes (proGenomes2) to 2 million (proGenomes4)"
+    - "Consistent annotation pipeline ensures comparability across all genomes"
+    - "Used by thousands of researchers for comparative genomics"
+    - "Integrated with major bioinformatics tools and workflows"
+  tech_stack:
+    - Python
+    - Nextflow pipelines
+    - Database management
+    - Large-scale data processing
+    - Web interfaces
+  links:
+    database: "https://progenomes.embl.de/"
+    paper: "https://academic.oup.com/nar/article/51/D1/D760/6833227"
+    github: "https://github.com/grp-bork/progenomes"
+  image: "/assets/images/projects/progenomes.png"
+  featured: true
+  featured_order: 2
+
+- id: spire
+  name: "SPIRE"
+  full_name: "Searchable, Planetary-scale mIcrobiome REsource"
+  tagline: "Integrating metagenome-derived data at planetary scale"
+  description: |
+    Co-led development of SPIRE, a comprehensive resource integrating consistently
+    processed metagenome-derived microbial data across habitats, geography, and
+    phylogeny. Enables researchers to explore the global microbiome with unprecedented
+    scope and consistency.
+  impact:
+    - "Integrated data from thousands of metagenomes worldwide"
+    - "Unified interface for exploring microbial diversity across ecosystems"
+    - "Consistent processing enables cross-study comparisons"
+    - "Published in Nucleic Acids Research (2024)"
+  tech_stack:
+    - Metagenomics pipelines
+    - Database architecture
+    - Web development
+    - Data integration
+  links:
+    paper: "https://academic.oup.com/nar/article/52/D1/D777/7330121"
+  image: "/assets/images/projects/spire.png"
+  featured: true
+  featured_order: 3
+
+- id: vire
+  name: "VIRE"
+  full_name: "Viral Resource with Environmental context"
+  tagline: "1.7 million viral genomes from global metagenomes"
+  description: |
+    Co-led development of VIRE, a comprehensive virome resource comprising over
+    1.7 million viral genomes recovered from >100,000 publicly available metagenomes.
+    Provides unprecedented insights into viral diversity across environmental contexts.
+  impact:
+    - "1.7+ million viral genomes with environmental metadata"
+    - "Largest metagenome-derived virome resource to date"
+    - "Enables study of viral ecology at global scale"
+    - "Published in Nucleic Acids Research (2025)"
+  tech_stack:
+    - Viral genome identification
+    - Metagenome assembly
+    - Database development
+    - Large-scale bioinformatics
+  links:
+    paper: "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkaf1225/8356007"
+  image: "/assets/images/projects/vire.png"
+  featured: false
+  featured_order: 4

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body class="layout--{{ page.layout | default: layout.layout }}{{ page.classes | join: ' ' | prepend: ' ' }} portfolio-page">
+    {% include_cached skip-links.html %}
+    {% include_cached browser-upgrade.html %}
+
+    <!-- Minimal Navigation -->
+    <nav class="portfolio-nav" id="portfolio-nav">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">{{ site.author.name }}</a>
+        <ul class="nav-links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Portfolio Content -->
+    <main class="portfolio-main" id="main" role="main">
+      {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <div class="page__footer">
+      <footer>
+        {% include_cached footer/custom.html %}
+        {% include_cached footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+    <!-- Custom Portfolio JavaScript -->
+    <script src="{{ '/assets/js/smooth-scroll.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/portfolio-interactions.js' | relative_url }}"></script>
+  </body>
+</html>

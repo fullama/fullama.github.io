@@ -1,0 +1,94 @@
+<section id="skills" class="skills-section">
+  <div class="container">
+    <h2 class="section-title">Technical Expertise</h2>
+    <p class="section-subtitle">
+      Skills and technologies for bioinformatics research and software development
+    </p>
+
+    <div class="skills-grid">
+      {% for category in site.data.skills.categories %}
+      <div class="skill-category">
+        <div class="skill-category-header">
+          <div class="skill-icon">
+            {% case category.icon %}
+              {% when 'dna' %}
+                <i class="fas fa-dna"></i>
+              {% when 'code' %}
+                <i class="fas fa-code"></i>
+              {% when 'chart' %}
+                <i class="fas fa-chart-line"></i>
+              {% when 'server' %}
+                <i class="fas fa-server"></i>
+              {% else %}
+                <i class="fas fa-cog"></i>
+            {% endcase %}
+          </div>
+          <h3 class="skill-category-title">{{ category.name }}</h3>
+        </div>
+
+        {% if category.description %}
+        <p class="skill-category-description">{{ category.description }}</p>
+        {% endif %}
+
+        <ul class="skills-list">
+          {% for skill in category.skills %}
+          <li class="skill-item" data-level="{{ skill.level }}">
+            <div class="skill-header">
+              <span class="skill-name">{{ skill.name }}</span>
+              {% if skill.level %}
+              <span class="skill-level">{{ skill.level }}</span>
+              {% endif %}
+            </div>
+
+            {% if skill.description %}
+            <div class="skill-details">{{ skill.description }}</div>
+            {% endif %}
+
+            {% if skill.frameworks or skill.tools or skill.platforms %}
+            <div class="skill-tags">
+              {% if skill.frameworks %}
+                {% for framework in skill.frameworks %}
+                  <span class="skill-tag">{{ framework }}</span>
+                {% endfor %}
+              {% endif %}
+              {% if skill.tools %}
+                {% for tool in skill.tools %}
+                  <span class="skill-tag">{{ tool }}</span>
+                {% endfor %}
+              {% endif %}
+              {% if skill.platforms %}
+                {% for platform in skill.platforms %}
+                  <span class="skill-tag">{{ platform }}</span>
+                {% endfor %}
+              {% endif %}
+            </div>
+            {% endif %}
+
+            {% if skill.level %}
+            <div class="skill-indicator"></div>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% if site.data.skills.tools.developed %}
+    <div class="tools-showcase">
+      <h3 class="tools-title">Developed Tools</h3>
+      <div class="tools-grid">
+        {% for tool in site.data.skills.tools.developed %}
+        <a href="{{ tool.link }}"
+           class="tool-card"
+           target="_blank"
+           rel="noopener">
+          <div class="tool-name">{{ tool.name }}</div>
+          <div class="tool-category">{{ tool.description }}</div>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,61 @@
+positions:
+  - title: "Senior Bioinformatics Software Engineer"
+    organization: "EMBL"
+    group: "Bork Group"
+    location: "Heidelberg, Germany"
+    start_date: "2019-05"
+    end_date: "present"
+    type: "industry"
+    description: |
+      Leading development of bioinformatics tools and databases for genome quality
+      assessment and prokaryotic genomics research. Building software used by
+      thousands of researchers worldwide.
+    highlights:
+      - "Developed GUNC tool for genome contamination detection (500+ citations)"
+      - "Led proGenomes database evolution from 87K to 2 million genomes"
+      - "Co-developed SPIRE and VIRE planetary-scale microbiome resources"
+      - "Collaborated with GTDB team on establishing quality standards"
+      - "Contributed to 68 peer-reviewed publications with 5,214+ citations"
+    tech: ["Python", "Nextflow", "HPC", "Metagenomics", "Database development"]
+    links:
+      - text: "Bork Group"
+        url: "https://www.bork.embl.de/"
+      - text: "EMBL"
+        url: "https://www.embl.org/"
+
+  - title: "PhD in Bioinformatics"
+    organization: "Maynooth University"
+    location: "Ireland"
+    start_date: "2015"
+    end_date: "2019"
+    type: "academic"
+    description: |
+      Conducted doctoral research in bioinformatics with focus on computational
+      genomics and microbial evolution. Developed computational methods and tools
+      that formed the foundation for later work on genome quality control.
+    highlights:
+      - "Developed novel computational methods for genomic analysis"
+      - "Published research in high-impact journals"
+      - "Established expertise in prokaryotic genomics"
+    tech: ["Python", "R", "Phylogenetics", "Comparative genomics"]
+    links:
+      - text: "Maynooth University"
+        url: "https://www.maynoothuniversity.ie/"
+
+  - title: "Bioinformatician"
+    organization: "German Cancer Research Center (DKFZ)"
+    group: "Genomics and Proteomics Core Facility"
+    location: "Heidelberg, Germany"
+    start_date: null
+    end_date: null
+    type: "industry"
+    description: |
+      Contributed bioinformatics expertise to cancer genomics research, supporting
+      core facility operations and collaborative research projects.
+    highlights:
+      - "Supported genomics and proteomics analysis workflows"
+      - "Collaborated on cancer genomics projects"
+    tech: ["Bioinformatics pipelines", "Genomics", "Core facility operations"]
+    links:
+      - text: "DKFZ"
+        url: "https://www.dkfz.de/"

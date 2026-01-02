@@ -1,0 +1,91 @@
+<section id="publications" class="publications-section">
+  <div class="container">
+    <h2 class="section-title">Research Impact</h2>
+    <div class="publications-stats">
+      <span class="stat">68 Publications</span>
+      <span class="stat-separator">•</span>
+      <span class="stat">5,214 Citations</span>
+    </div>
+
+    <div class="publications-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="first-author">First Author</button>
+      <button class="filter-btn" data-filter="genomics">Genomics</button>
+      <button class="filter-btn" data-filter="metagenomics">Metagenomics</button>
+      <button class="filter-btn" data-filter="database">Databases</button>
+
+      <input type="search"
+             class="publication-search"
+             placeholder="Search publications..."
+             aria-label="Search publications">
+    </div>
+
+    <div class="publications-grid">
+      {% for pub in site.data.publications.featured %}
+      <article class="publication-card"
+               data-tags="{{ pub.tags | join: ' ' }}"
+               data-first-author="{{ pub.first_author }}">
+        <div class="publication-header">
+          {% if pub.featured %}
+          <span class="badge badge-featured">Featured</span>
+          {% endif %}
+          {% if pub.first_author %}
+          <span class="badge badge-first-author">First Author</span>
+          {% endif %}
+        </div>
+
+        <h3 class="publication-title">{{ pub.title }}</h3>
+
+        <p class="publication-meta">
+          <span class="journal">{{ pub.journal }}</span>
+          {% if pub.year %} • <span class="year">{{ pub.year }}</span>{% endif %}
+        </p>
+
+        <div class="publication-metrics">
+          <span class="citations">
+            <i class="fas fa-quote-right"></i> {{ pub.citations }} citations
+          </span>
+        </div>
+
+        <div class="publication-links">
+          {% if pub.links.paper %}
+          <a href="{{ pub.links.paper }}" class="pub-link" target="_blank" rel="noopener">
+            <i class="fas fa-external-link-alt"></i> Paper
+          </a>
+          {% endif %}
+          {% if pub.links.github %}
+          <a href="{{ pub.links.github }}" class="pub-link" target="_blank" rel="noopener">
+            <i class="fab fa-github"></i> Code
+          </a>
+          {% endif %}
+          {% if pub.links.pdf %}
+          <a href="{{ pub.links.pdf }}" class="pub-link" target="_blank" rel="noopener">
+            <i class="fas fa-file-pdf"></i> PDF
+          </a>
+          {% endif %}
+          {% if pub.links.database %}
+          <a href="{{ pub.links.database }}" class="pub-link" target="_blank" rel="noopener">
+            <i class="fas fa-database"></i> Database
+          </a>
+          {% endif %}
+          {% if pub.doi %}
+          <a href="https://doi.org/{{ pub.doi }}" class="pub-link" target="_blank" rel="noopener">
+            <i class="fas fa-link"></i> DOI
+          </a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="publications-footer">
+      <a href="https://scholar.google.com/citations?user=X2CsjEIAAAAJ"
+         class="btn btn-outline"
+         target="_blank"
+         rel="noopener">
+        View All Publications on Google Scholar
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
