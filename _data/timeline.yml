@@ -5,13 +5,13 @@ positions:
     location: "Heidelberg, Germany"
     start_date: "2019-05"
     end_date: "present"
-    type: "industry"
+    type: "academic"
     description: |
       Leading development of bioinformatics tools and databases for genome quality
       assessment and prokaryotic genomics research. Building software used by
       thousands of researchers worldwide.
     highlights:
-      - "Developed GUNC tool for genome contamination detection (500+ citations)"
+      - "Developed GUNC tool for genome contamination detection (260+ citations)"
       - "Led proGenomes database evolution from 87K to 2 million genomes"
       - "Co-developed SPIRE and VIRE planetary-scale microbiome resources"
       - "Collaborated with GTDB team on establishing quality standards"
@@ -27,8 +27,8 @@ positions:
     organization: "NUI Maynooth"
     group: "Host-Pathogen Interaction Laboratory"
     location: "Maynooth, Ireland"
-    start_date: "2009"
-    end_date: "2013"
+    start_date: "2009-09"
+    end_date: "2013-12"
     type: "academic"
     description: |
       Doctoral research on "The role of the human DEAD-box protein DDX3 in type I

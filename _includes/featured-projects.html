@@ -47,6 +47,11 @@
           </div>
 
           <div class="project-links">
+            {% if project.links.website %}
+            <a href="{{ project.links.website }}" class="btn-link" target="_blank" rel="noopener">
+              <i class="fas fa-globe"></i> Website
+            </a>
+            {% endif %}
             {% if project.links.github %}
             <a href="{{ project.links.github }}" class="btn-link" target="_blank" rel="noopener">
               <i class="fab fa-github"></i> GitHub
