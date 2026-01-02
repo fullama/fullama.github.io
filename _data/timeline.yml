@@ -23,26 +23,6 @@ positions:
       - text: "EMBL"
         url: "https://www.embl.org/"
 
-  - title: "PhD - Post-Graduate Researcher"
-    organization: "NUI Maynooth"
-    group: "Host-Pathogen Interaction Laboratory"
-    location: "Maynooth, Ireland"
-    start_date: "2009-09"
-    end_date: "2013-12"
-    type: "academic"
-    description: |
-      Doctoral research on "The role of the human DEAD-box protein DDX3 in type I
-      interferon induction" under Dr. Martina Schroeder. Investigated host-pathogen
-      interactions and innate immune responses at the molecular level.
-    highlights:
-      - "Characterized DDX3 protein's role in antiviral immune responses"
-      - "Developed expertise in molecular biology and cell signaling"
-      - "Published findings on interferon induction mechanisms"
-    tech: ["Cell culture", "Co-Immunoprecipitation", "Molecular Cloning", "qRT-PCR", "Confocal Microscopy", "siRNA Knockdown", "Luciferase Reporter Assays"]
-    links:
-      - text: "Maynooth University"
-        url: "https://www.maynoothuniversity.ie/"
-
   - title: "Bioinformatician"
     organization: "German Cancer Research Center (DKFZ)"
     group: "Genomics and Proteomics Core Facility"
@@ -82,3 +62,23 @@ positions:
         url: "https://www.sanger.ac.uk/"
       - text: "Cancer Genome Project"
         url: "https://www.sanger.ac.uk/group/cancer-genome-project/"
+
+  - title: "PhD - Post-Graduate Researcher"
+    organization: "NUI Maynooth"
+    group: "Host-Pathogen Interaction Laboratory"
+    location: "Maynooth, Ireland"
+    start_date: "2009-09"
+    end_date: "2013-12"
+    type: "academic"
+    description: |
+      Doctoral research on "The role of the human DEAD-box protein DDX3 in type I
+      interferon induction" under Dr. Martina Schroeder. Investigated host-pathogen
+      interactions and innate immune responses at the molecular level.
+    highlights:
+      - "Characterized DDX3 protein's role in antiviral immune responses"
+      - "Developed expertise in molecular biology and cell signaling"
+      - "Published findings on interferon induction mechanisms"
+    tech: ["Cell culture", "Co-Immunoprecipitation", "Molecular Cloning", "qRT-PCR", "Confocal Microscopy", "siRNA Knockdown", "Luciferase Reporter Assays"]
+    links:
+      - text: "Maynooth University"
+        url: "https://www.maynoothuniversity.ie/"
