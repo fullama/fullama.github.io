@@ -14,8 +14,6 @@ positions:
       - "Developed GUNC tool for genome contamination detection (260+ citations)"
       - "Led proGenomes database evolution from 87K to 2 million genomes"
       - "Co-developed SPIRE and VIRE planetary-scale microbiome resources"
-      - "Collaborated with GTDB team on establishing quality standards"
-      - "Contributed to 68 peer-reviewed publications with 5,214+ citations"
     tech: ["Python", "Nextflow", "HPC", "Metagenomics", "Database development"]
     links:
       - text: "Bork Group"
