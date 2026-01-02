@@ -10,7 +10,7 @@ featured:
     pages: 178
     doi: "10.1186/s13059-021-02393-0"
     pmid: "34120611"
-    citations: "500+"
+    citations: "250+"
     featured: true
     first_author: true
     tags: ["genomics", "quality-control", "metagenomics", "tools"]
@@ -28,7 +28,7 @@ featured:
     issue: D1
     pages: "D760-D766"
     doi: "10.1093/nar/gkac1078"
-    citations: "66"
+    citations: "60+"
     featured: true
     first_author: true
     tags: ["genomics", "database", "prokaryotes", "annotation"]
@@ -46,7 +46,7 @@ featured:
     issue: D1
     pages: "D777-D783"
     doi: "10.1093/nar/gkad943"
-    citations: "72"
+    citations: "70+"
     featured: true
     first_author: true
     tags: ["metagenomics", "database", "microbiome", "resource"]
