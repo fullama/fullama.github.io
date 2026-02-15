@@ -9,8 +9,7 @@
     contigs, revealing hidden genome assembly artifacts.
   impact:
     - "Revealed 15-30% of 'high-quality' MAGs were undetected chimeras"
-    - "500+ citations since 2021 publication in Genome Biology"
-    - "Adopted by GTDB, NCBI, and major genome sequencing centers"
+    - "250+ citations since 2021 publication in Genome Biology"
     - "Improved quality standards for prokaryotic genome databases worldwide"
   tech_stack:
     - Python
