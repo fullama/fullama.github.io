@@ -10,7 +10,7 @@ featured:
     pages: 178
     doi: "10.1186/s13059-021-02393-0"
     pmid: "34120611"
-    citations: "250+"
+    citations: "270+"
     featured: true
     first_author: true
     tags: ["genomics", "quality-control", "metagenomics", "tools"]
@@ -28,7 +28,7 @@ featured:
     issue: D1
     pages: "D760-D766"
     doi: "10.1093/nar/gkac1078"
-    citations: "60+"
+    citations: "65+"
     featured: true
     first_author: true
     tags: ["genomics", "database", "prokaryotes", "annotation"]
@@ -46,7 +46,7 @@ featured:
     issue: D1
     pages: "D777-D783"
     doi: "10.1093/nar/gkad943"
-    citations: "70+"
+    citations: "75+"
     featured: true
     first_author: true
     tags: ["metagenomics", "database", "microbiome", "resource"]
@@ -91,7 +91,7 @@ featured:
     volume: 28
     pages: "1902-1912"
     doi: "10.1038/s41591-022-01913-0"
-    citations: "202"
+    citations: "205+"
     featured: false
     tags: ["microbiome", "fmt", "metagenomics", "clinical"]
     links:
@@ -107,7 +107,7 @@ featured:
     issue: 7
     pages: "1359-1372"
     doi: "10.1136/gutjnl-2021-324755"
-    citations: "257"
+    citations: "265+"
     featured: false
     tags: ["microbiome", "cancer", "biomarker", "clinical"]
     links:
@@ -123,7 +123,7 @@ featured:
     issue: 14
     pages: "3761-3778"
     doi: "10.1016/j.cell.2024.05.013"
-    citations: "259"
+    citations: "280+"
     featured: false
     tags: ["machine-learning", "antimicrobials", "metagenomics", "functional-genomics"]
     links:
